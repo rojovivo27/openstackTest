@@ -14,6 +14,10 @@ dpkg --get-selections | grep mysql
 sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt php5-mysql -y
 sudo service apache2 restart
 
+#Install Composer
+sudo apt install composer -y
+composer require php-opencloud/openstack 
+
 #Copying landing page
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/my-landing-page.html
 sudo cp my-landing-page.html /var/www/html/index.html
