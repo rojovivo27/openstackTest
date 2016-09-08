@@ -7,7 +7,7 @@ sudo apt-get install apache2 apache2-doc apache2-mpm-prefork apache2-utils libex
 
 #Install php
 
-sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt
+sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt -y
 sudo service apache2 restart
 
 
