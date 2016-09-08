@@ -39,8 +39,8 @@ sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql
 sudo systemctl restart apache2
 
 #Copying landing page
-wget https://raw.githubusercontent.com/openstack-hackathon/training-shade-cucea/master/challenge1/my-landing-page.html
+wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/my-landing-page.html
 sudo cp my-landing-page.html /var/www/html/index.html
 
-wget --user lamaredu --password 12.lamar.34$$ http://www.lamar.edu.mx/innova/info.txt
-sudo cp info.txt /var/www/html/info.php
+wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/info.php
+sudo cp info.php /var/www/html/info.php
