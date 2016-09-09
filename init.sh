@@ -10,6 +10,9 @@ echo mysql-server-5.1 mysql-server/root_password_again password pistones | debco
 apt-get install -y mysql-server
 dpkg --get-selections | grep mysql
 
+#CreateDB
+mysql -u root -ppistones -e "create database pistones"
+
 #Install php
 sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt php5-mysql -y
 sudo service apache2 restart
