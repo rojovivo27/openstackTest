@@ -12,6 +12,8 @@ dpkg --get-selections | grep mysql
 
 #CreateDB
 mysql -u root -ppistones -e "create database pistones"
+mysql -u root -ppistones -e "USE pistones; CREATE TABLE usuarios ( id_usuario int(6) NOT NULL, nombre varchar(50) NOT NULL, email varchar(50) NOT NULL, PRIMARY KEY (id_usuario) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+mysql -u root -ppistones -e "USE pistones; CREATE TABLE fotografias ( id_fotografia int(6) NOT NULL, id_usuario int(6) NOT NULL, nombre varchar(50) NOT NULL, latitud varchar(50) NOT NULL, longitud varchar(50) NOT NULL, url_thumb varchar(100) NOT NULL, url_fotografia varchar(100) NOT NULL, fecha_hora datetime NOT NULL, PRIMARY KEY (id_fotografia) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;"
 
 #Install php
 sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt php5-mysql -y
@@ -26,6 +28,4 @@ wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/my-landin
 sudo cp my-landing-page.html /var/www/html/index.html
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/info.php
 sudo cp info.php /var/www/html/info.php
-wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/prueba.php
-sudo cp prueba.php /var/www/html/prueba.php
 
