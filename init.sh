@@ -22,14 +22,10 @@ sudo apt install composer -y
 composer require php-opencloud/openstack 
 
 #Copying landing page
-#wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/my-landing-page.html
-#sudo cp my-landing-page.html /var/www/html/index.html
+wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/my-landing-page.html
+sudo cp my-landing-page.html /var/www/html/index.html
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/info.php
 sudo cp info.php /var/www/html/info.php
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/prueba.php
 sudo cp prueba.php /var/www/html/prueba.php
 
-#Creating Gallery
-git clone https://github.com/blueimp/Bootstrap-Image-Gallery.git
-sudo cp -R Bootstrap-Image-Gallery/* .
-sudo rm -f Bootstrap-Image-Gallery
