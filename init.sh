@@ -29,5 +29,5 @@ sudo cp my-landing-page.html /var/www/html/index.html
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/info.php
 sudo cp info.php /var/www/html/info.php
 wget https://raw.githubusercontent.com/rojovivo27/openstackTest/master/prueba.php
-sudo cp info.php /var/www/html/prueba.php
+sudo cp prueba.php /var/www/html/prueba.php
 
