@@ -20,10 +20,10 @@ sudo apt-get install libapache2-mod-php5 php5 php5-mcrypt php5-mysql -y
 sudo service apache2 restart
 
 #Upgrade php
-sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
-sudo apt-get install php7.0 -y
-sudo apt-get install php7.0-mysql -y
+#sudo add-apt-repository ppa:ondrej/php
+#sudo apt-get update
+#sudo apt-get install php7.0 -y
+#sudo apt-get install php7.0-mysql -y
 
 #Install Composer
 sudo apt install composer -y
