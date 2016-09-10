@@ -1,6 +1,6 @@
 <?php
 
-	require 'vendor/autoload.php';
+	//require 'vendor/autoload.php';
 
 	$openstack = new OpenStack\OpenStack([
 	    'authUrl' => 'http://172.16.6.2:5000/v2.0',
