@@ -46,7 +46,7 @@ var misPuntos = [
   for( $i=0; $i<$max; $i++ )
   {
     printf( "['%s', '%s', '%s', '%s', '<p>Subida por: %s <br />%s</p><p><a href=\"%s\" target=\"_blank\"><img src=\"%s\" height=\"300\" /></a></p>'], ", 
-    $fecha_hora[$i], $latitud[$i], $longitud[$i], $url_thumb[$i], $nombre[$i], $email[$i], $url_fotografia[$i], $url_fotografia[$i] );
+    $fecha_hora[$i], $latitud[$i], $longitud[$i], $url_fotografia[$i], $nombre[$i], $email[$i], $url_fotografia[$i], $url_fotografia[$i] );
   }
 ?>
 ];
@@ -72,11 +72,18 @@ function setGoogleMarkers(map, locations) {
 	for(var i=0; i<locations.length; i++) {
 		var elPunto = locations[i];
 		var myLatLng = new google.maps.LatLng(elPunto[1], elPunto[2]);
-
+		
+		var iconTemp = {
+    			url: elPunto[3],
+    			scaledSize: new google.maps.Size(50, 50),
+    			origin: new google.maps.Point(0,0),
+    			anchor: new google.maps.Point(0, 0)
+		};
+		
 		markers[i]=new google.maps.Marker({
 			position: myLatLng,
 			map: map,
-			icon: elPunto[3],
+			icon: iconTemp,
 			title: elPunto[0]
 		});
 		markers[i].infoWindow=new google.maps.InfoWindow({
