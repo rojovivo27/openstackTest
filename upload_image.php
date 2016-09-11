@@ -52,7 +52,7 @@
   date_default_timezone_set( "America/Mexico_City" );
   $fechahora = date( "Y-m-d H:i:s" );
   
-  $filenamenew = date( "Y_m_d__H_i_s__".$id_fotografia.".jpg" );
+  $filenamenew = date( "Y_m_d__H_i_s__" ).$id_fotografia.".jpg";
   rename( "uploads/".$filename, "uploads/".$filenamenew );
   
 /*  
@@ -78,4 +78,6 @@
   $res = $mysqli->query( $sql );
   
   $mysqli->close( );
+  
+  exec( "python uploadImage2Swift.py $filenamenew uploads/$filenamenew" );
 ?>
