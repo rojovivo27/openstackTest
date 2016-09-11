@@ -52,13 +52,10 @@
   date_default_timezone_set( "America/Mexico_City" );
   $fechahora = date( "Y-m-d H:i:s" );
   
-  if( substr( $filename, -3 )!="jpg" )
-  {
-    rename( "uploads/".$filename, "uploads/".$filename.".jpg" ); 
-    $filename = $filename.".jpg";	  
-  }
+  $filenamenew = date( "Y_m_d__H_i_s__".$id_fotografia.".jpg" );
+  rename( "uploads/".$filename, "uploads/".$filenamenew );
   
-  
+/*  
   $imagen = "thumb_".$filename;
   $imagen1 = "uploads/".$filename;
   $imagen2 = getimagesize( $imagen1 );
@@ -74,9 +71,10 @@
   imagejpeg( $nuevo, $url_thumb, 95 );
   imagedestroy( $nuevo );
   imagedestroy( $origen );
+*/  
   
-    
-  $sql = "INSERT INTO fotografias VALUES( '$id_fotografia', '$id_usuario', '$filename', '$latitude', '$longitude', '$url_thumb', 'uploads/$filename', '$fechahora' )";
+  $sql = "INSERT INTO fotografias VALUES( '$id_fotografia', '$id_usuario', '$filenamenew', '$latitude', '$longitude', 'uploads/$filenamenew',
+  'uploads/$filenamenew', '$fechahora' )";
   $res = $mysqli->query( $sql );
   
   $mysqli->close( );
