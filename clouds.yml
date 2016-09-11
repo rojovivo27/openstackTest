@@ -1,0 +1,8 @@
+clouds:
+  pistones:
+    auth:
+      auth_url: http://172.16.6.2:5000/v2.0
+      project_name: osic-hackathon-team.c2
+      username: team.c2
+      password: kNd38H92
+    region_name: RegionOne
